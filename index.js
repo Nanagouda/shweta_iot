@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const measurementsRouter = require('./routes/measureRoutes');
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.json());
+
+app.use('/measurements', measurementsRouter);
 
 app.listen(port, () => {
-  console.log(`Habitat is up and running at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${port}`)
 })
