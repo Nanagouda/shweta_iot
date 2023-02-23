@@ -1,3 +1,7 @@
+/* index.js */
+require('dotenv').config({ path: __dirname + '/.env' })
+const pool = require('./config/database');
+
 const express = require('express')
 const app = express()
 const port = 3000
