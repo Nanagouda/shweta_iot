@@ -36,7 +36,7 @@ exports.postMeasurement = function(req, res, next) {
 
 exports.getLatestMeasurement = function(req, res, next) {
     // Get most recent measurement from db and return as JSON.
-    pool.query('SELECT * FROM measurements ORDER BY created DESC LIMIT 1;', (error, results) => {
+    pool.query('SELECT * FROM measurements ORDER BY created DESC LIMIT 10;', (error, results) => {
         if (error)
             throw error;
         res.status(200).json(results.rows);

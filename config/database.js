@@ -5,7 +5,7 @@ const pool = new Pool({
     port: '5432',
     database: 'shweta_iot',
     user: 'postgres',
-    password: 'nanu',
+    password: '12345',
     
 })
 
